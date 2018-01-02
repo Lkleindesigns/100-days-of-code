@@ -20,6 +20,7 @@ Day 1: January 1, 2018
 
 <img src="https://dev.codetrick.net/wp-content/uploads/2017/05/7.png" alt="ReactJs">
 <img src ="https://i.imgur.com/6tdbBJj.png">
+
 **Today's Progress**: I've been working on creating sites and learning more about react. I worked on a simple book app to reinforce
 React Prop and Component basics. I also set up a virtual wokrspace, visual log for this journey and created my first commit.
 

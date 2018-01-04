@@ -82,3 +82,47 @@ class Counter extends Component {
 **Thoughts:**: Updating state is tricky, it has a lot of very specific rules. 
 
 **Link to work:**: [react-counter](https://github.com/Lkleindesigns/state-practice/blob/master/src/Counter.js)
+
+<h2 align=”center”>
+Day 3: January 3, 2018
+</h2>
+
+<img src="https://udemy-images.udemy.com/course/750x422/1286908_1773_4.jpg" alt="ReactJs">
+<img src ="https://media.giphy.com/media/3ohc0TbEIU708sJhVm/giphy.gif">
+
+**Today's Progress**: Today I created a random box app with react, which creates an array of boxes, randomly selects a box 
+and randomly changes it to a different color every second. This app really helped my understanding of pure functions,
+stateless functional objects, react component architecture and the intricacies of state and setState.
+
+```
+const NUM_RECT = 300;
+
+const Rect = ({color}) => {
+  const style = {
+    width: '100px',
+    height: '180px',
+    display: 'inline-block',
+    backgroundColor: color
+  }
+  return <div style={style} />
+}
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    const rects = Array(NUM_RECT).fill().map(this.getRandomColor, this)
+    this.state = {rects}
+    
+    setInterval(() => {
+      const rects = this.state.rects.slice()
+      const randIndex = Math.floor(Math.random() * rects.length)
+      rects[randIndex] = this.getRandomColor()
+      this.setState({rects})
+    },300)
+  }
+```
+
+**Thoughts:**: I started this exercise feeling hopeless, but with research and time I overcame it. I had a lot of life distractions 
+and obstacles, still I made coding my priority regardless and feel really accomplished.
+
+**Link to work:**: [random-boxes](https://github.com/Lkleindesigns/random-boxes/blob/master/src/App.js)

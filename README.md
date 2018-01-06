@@ -123,6 +123,18 @@ class App extends Component {
 ```
 
 **Thoughts:**: I started this exercise feeling hopeless, but with research and time I overcame it. I had a lot of life distractions 
-and obstacles, still I made coding my priority regardless and feel really accomplished.
+and obstacles, still I made coding my priority regardless and feel really accomplished today.
 
 **Link to work:**: [random-boxes](https://github.com/Lkleindesigns/random-boxes/blob/master/src/App.js)
+
+<h2 align=”center”>
+Day 4: January 5, 2018
+</h2>
+
+<img src="https://scontent-dft4-2.xx.fbcdn.net/v/t31.0-8/25488302_373727013076731_1843187123777200206_o.jpg?oh=8b54791f18bb7d30291be7eb5f332147&oe=5AFAEEE2" alt="ReactJs">
+
+
+**Today's Progress**: I learned a lot about the virtual DOM, synthetic events, error boundaries, and Fiber. Today didn't consist of a lot of actual code it was more research and learning.
+I also committed to the Code Newbies Get a Job Challenge and completed my first assignment analyzing my own skills and researching potential job requirements.
+
+**Thoughts:**: I missed a day yesterday but made up for it today!

@@ -122,7 +122,7 @@ class App extends Component {
   }
 ```
 
-**Thoughts:**: I started this exercise feeling hopeless, but with research and time I overcame it. I had a lot of life distractions 
+**Thoughts:**: I started this exercise feeling unsure, but with research and time I overcame it. I had a lot of life distractions 
 and obstacles, still I made coding my priority regardless and feel really accomplished today.
 
 **Link to work:**: [random-boxes](https://github.com/Lkleindesigns/random-boxes/blob/master/src/App.js)
@@ -135,6 +135,23 @@ Day 4: January 5, 2018
 
 
 **Today's Progress**: I learned a lot about the virtual DOM, synthetic events, error boundaries, and Fiber. Today didn't consist of a lot of actual code it was more research and learning.
-I also committed to the Code Newbies Get a Job Challenge and completed my first assignment analyzing my own skills and researching potential job requirements.
+I also committed to the Code Newbies Get a Job Challenge and completed my first assignment analyzing my own skills and researching potential future job.
 
 **Thoughts:**: I missed a day yesterday but made up for it today!
+
+<h2 align=”center”>
+Day 5: January 6, 2018
+</h2>
+
+<img src="http://marlacummins.com/wp-content/uploads/2014/10/To_Do_List.png" alt="ReactJs">
+
+
+**Today's Progress**: I created a very simple todo app with react, learned a lot about how to work with
+click events, forms, and inputs within react. Read some of the React documentation and also refreshed my memory
+on some ES6 subjects.
+
+**Thoughts:**: I'm beginning to feel more confident with react and seeing design patterns.
+
+**Link to work:**: [react-simple-todolist](https://github.com/Lkleindesigns/react-simple-todolist/blob/master/src/App.js)
+
+

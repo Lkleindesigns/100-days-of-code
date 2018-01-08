@@ -143,7 +143,7 @@ I also committed to the Code Newbies Get a Job Challenge and completed my first 
 Day 5: January 6, 2018
 </h2>
 
-<img src="http://marlacummins.com/wp-content/uploads/2014/10/To_Do_List.png" alt="ReactJs">
+<img src="https://tech.io/blog/wp-content/uploads/2017/08/todolist2-1.jpg" alt="ReactJs">
 
 
 **Today's Progress**: I created a very simple todo app with react, learned a lot about how to work with

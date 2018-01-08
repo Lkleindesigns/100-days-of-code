@@ -154,4 +154,17 @@ on some ES6 subjects.
 
 **Link to work:**: [react-simple-todolist](https://github.com/Lkleindesigns/react-simple-todolist/blob/master/src/App.js)
 
+<h2 align=”center”>
+Day 6: January 7, 2018
+</h2>
+
+<img src="https://udemy-images.udemy.com/course/750x422/1049092_8c52_2.jpg">
+
+
+**Today's Progress**: I updated my previous book app into a recipe app, added a form, click events, and some css, I also watched some videos and cloned a project
+I have been working on with a friend using Node, Mongo and Express with jQuery. 
+
+**Thoughts:**: Need to make the form save the data thats saved and update the virtual DOM and work more on other projects
+
+**Link to work:**: [recipe-react-app](https://github.com/Lkleindesigns/recipe-react-app)
 

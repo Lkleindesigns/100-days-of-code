@@ -168,3 +168,16 @@ I have been working on with a friend using Node, Mongo and Express with jQuery.
 
 **Link to work:**: [recipe-react-app](https://github.com/Lkleindesigns/recipe-react-app)
 
+<h2 align=”center”>
+Day 7: January 8, 2018
+</h2>
+
+<img src="https://reactjs.org/logo-og.png">
+
+
+**Today's Progress**: Continued to work on the recipe react app added functionality to the form. Saving
+showing and hiding, and begun working on delete functionality.
+
+**Thoughts:**: Forms within react are complex and will take some more time to feel comfortable working with them.
+
+**Link to work:**: [recipe-react-app](https://github.com/Lkleindesigns/recipe-react-app)

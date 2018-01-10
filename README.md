@@ -181,3 +181,17 @@ showing and hiding, and begun working on delete functionality.
 **Thoughts:**: Forms within react are complex and will take some more time to feel comfortable working with them.
 
 **Link to work:**: [recipe-react-app](https://github.com/Lkleindesigns/recipe-react-app)
+
+<h2 align=”center”>
+Day 8: January 9, 2018
+</h2>
+
+<img src="http://bleedingcode.com/wp-content/uploads/2016/07/reactjs-javascript-banner-e1469539084683.jpg">
+
+
+**Today's Progress**: Finished delete functionality for the recipe app. Began working on a memory game react app. Got basic functionality working, need to add a reset button.
+
+**Thoughts:**: Finally feel like I have a solid understanding of writing complex ternary operators. Getting more comfortable with React little by little each day.
+
+**Link to work:**: [recipe-react-app](https://github.com/Lkleindesigns/recipe-react-app)
+**Link to work:**: [react-memory-game](https://github.com/Lkleindesigns/react-memory-game/blob/master/src/MemoryGame.js)

@@ -195,3 +195,13 @@ Day 8: January 9, 2018
 
 **Link to work:**: [recipe-react-app](https://github.com/Lkleindesigns/recipe-react-app)
 **Link to work:**: [react-memory-game](https://github.com/Lkleindesigns/react-memory-game/blob/master/src/MemoryGame.js)
+
+<h2 align=”center”>
+Day 9: January 10, 2018
+</h2>
+
+**Today's Progress**: Set up a local dev environment on my PC due to having issues with Webpack on c9. Spent a few hours reading the React docs and following some examples
+
+**Thoughts:**: Took a step backwards today to really reinforce everything that i've been learning the past week.
+
+

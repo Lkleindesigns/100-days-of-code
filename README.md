@@ -204,4 +204,28 @@ Day 9: January 10, 2018
 
 **Thoughts:**: Took a step backwards today to really reinforce everything that i've been learning the past week.
 
+<h2 align=”center”>
+Day 10: January 11, 2018
+</h2>
+
+**Today's Progress**: Setup environment to run and transpile JSX using babel, more time spent with the React docs. Wrote some basic JSX to make sure babel is working locally.
+```
+const app = {
+    title: 'Indecision App',
+    subtitle: 'Put your life in the hands of a computer'
+}
+
+var template = (
+    <div>
+        <h1>{app.title}</h1>
+        <p>{app.subtitle}</p>
+    </div>
+)
+
+var appRoot = document.getElementById('app')
+
+ReactDOM.render(template, appRoot)
+```
+
+**Thoughts:**: Trusting in the process. 10 days in I can't wait to see where i'm at 100 days. Taking a few steps back to take larger strides forward!
 

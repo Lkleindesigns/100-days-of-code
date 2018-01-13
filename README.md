@@ -229,3 +229,30 @@ ReactDOM.render(template, appRoot)
 
 **Thoughts:**: Trusting in the process. 10 days in I can't wait to see where i'm at 100 days. Taking a few steps back to take larger strides forward!
 
+<h2 align=”center”>
+Day 11: January 12, 2018
+</h2>
+
+```
+const app = {
+    title: 'Indecision App',
+    subtitle: 'Put your life in the hands of a computer',
+    options: ['One', 'Two']
+}
+
+const template = (
+    <div>
+        <h1>{app.title}</h1>
+        {app.subtitle && <p>{app.subtitle}</p>}
+        <p>{app.options.length > 0 ? "Here are your options" : "No Options"}</p>
+    </div>
+)
+
+const appRoot = document.getElementById('app')
+
+ReactDOM.render(template, appRoot)
+```
+
+**Today's Progress**:  Practice with JSX conditional rendering, const and let, and arrow functions
+
+**Thoughts:**: Worked an 11 hour shift today so my coding time was only an hour.

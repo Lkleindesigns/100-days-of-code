@@ -255,4 +255,45 @@ ReactDOM.render(template, appRoot)
 
 **Today's Progress**:  Practice with JSX conditional rendering, const and let, and arrow functions
 
-**Thoughts:**: Worked an 11 hour shift today so my coding time was only an hour.
+**Thoughts:**: Worked an 11 hour shift today so my coding time was limited to only an hour.
+
+<h2 align=”center”>
+Day 12: January 13, 2018
+</h2>
+
+**Today's Progress**: ES6 Arrow functions, events and attributes in React, and manual data binding. Wrote a simple counter app
+
+**Thoughts:**: I've had limited time to code the past couple days. Nothing will stop me from getting at least an hour every day, no excuses.
+```
+let count = 0
+
+const addOne = () => {
+    count++
+    renderCounterApp()
+}
+const minusOne = () => {
+    count--
+    renderCounterApp()
+}
+const reset = () => {
+    count = 0
+    renderCounterApp()
+}
+
+const appRoot = document.getElementById('app')
+
+const renderCounterApp = () => {
+    const templateTwo = (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={addOne}>+1</button>
+            <button onClick={minusOne}>-1</button>
+            <button onClick={reset}>reset</button>
+        </div>
+    )
+
+    ReactDOM.render(templateTwo, appRoot)
+}
+
+renderCounterApp()
+```

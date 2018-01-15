@@ -297,3 +297,54 @@ const renderCounterApp = () => {
 
 renderCounterApp()
 ```
+
+<h2 align=”center”>
+Day 13: January 14, 2018
+</h2>
+
+**Today's Progress**: More practice with React basics, forms and inputs, and rendering in react.
+
+**Thoughts:**: Feeling a lot more confident with forms and events and referencing the React docs if I get stuck.
+
+```
+const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const option = e.target.elements.option.value
+
+    if(option) {
+        app.options.push(option)
+        e.target.elements.option.value = ''
+        renderTemplate()
+    }
+}
+
+const handleRemoveAll = () => {
+        app.options = []
+        renderTemplate()
+}
+
+const renderTemplate = () => {
+    const template = (
+        <div>
+            <h1>{app.title}</h1>
+            {app.subtitle && <p>{app.subtitle}</p>}
+            <p>{app.options.length > 0 ? "Here are your options" : "No Options"}</p>
+            <p>{app.options.length}</p>
+            <button onClick={handleRemoveAll}>Remove All</button>
+            <ol>
+                <li>Option one</li>
+                <li>Option two</li>
+            </ol>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="option" />
+                <button>Add Option</button>
+            </form>
+        </div>
+    )
+    ReactDOM.render(template, appRoot)
+}
+
+const appRoot = document.getElementById('app')
+renderTemplate()
+```

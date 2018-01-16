@@ -348,3 +348,43 @@ const renderTemplate = () => {
 const appRoot = document.getElementById('app')
 renderTemplate()
 ```
+
+<h2 align=”center”>
+Day 14: January 15, 2018
+</h2>
+
+**Today's Progress**: Even more practice with JSX, Basic functionality for simple app working.
+
+**Thoughts:**: Two weeks in and im proud of myself, worked another 12 hour shift today and still stayed consistent with an hour of code! No excuses.
+```
+const onMakeDecision = () => {
+    const randomNum = Math.floor(Math.random() * app.options.length)
+    const option = app.options[randomNum]
+    alert(option)
+}
+
+const renderTemplate = () => {
+    const template = (
+        <div>
+            <h1>{app.title}</h1>
+            {app.subtitle && <p>{app.subtitle}</p>}
+            <p>{app.options.length > 0 ? "Here are your options" : "No Options"}</p>
+            <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should I do?</button>
+            <button onClick={handleRemoveAll}>Remove All</button>
+            <ol>
+                {    
+                    app.options.map((option, i) => <li key={i}>{option}</li>)
+                }
+            </ol>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="option" />
+                <button>Add Option</button>
+            </form>
+        </div>
+    )
+    ReactDOM.render(template, appRoot)
+}
+
+const appRoot = document.getElementById('app')
+renderTemplate()
+```

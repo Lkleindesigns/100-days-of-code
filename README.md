@@ -388,3 +388,71 @@ const renderTemplate = () => {
 const appRoot = document.getElementById('app')
 renderTemplate()
 ```
+
+<h2 align=”center”>
+Day 15 & 16: January 16-17, 2018
+</h2>
+
+**Today's Progress**: Built a simple visibility toggler using JSX and babel, review of ES6 classes, constructors, and the super and extends keywords.
+
+**Thoughts:**: Feeling more confident with React fundamentals. Didn't update the log yesterday but I did code, so including yesterdays work in with today.
+```
+let visibility = false
+
+const handleClick = () => {
+    visibility = !visibility
+    renderTemplate()
+}
+
+const renderTemplate = () => {
+    const template = (
+        <div>
+            <h1>Visibility Toggler</h1>
+            <button onClick={handleClick}>
+                {visibility ? 'Hide Details' : 'Show Details'}
+            </button>
+            {visibility && (
+                <div>
+                <p>Something</p>
+                </div>
+            )}
+        </div>
+    )
+    ReactDOM.render(template, document.getElementById('app'))
+}
+
+renderTemplate()
+```
+```
+class Person {
+    constructor(name='anonymous', age=0) {
+        this.name = name || 'test'
+        this.age = age
+    }
+    sayHello(){
+        return `Hi! ${this.name} nice to meet you!`
+    }
+    getDescription(){
+        return `${this.name} is ${this.age} years old`
+    }
+}
+
+class Student extends Person {
+    constructor(name, age, major){
+        super(name, age)
+        this.major = major
+    }
+    hasMajor() {
+       return !!this.major
+    }
+    getDescription() {
+        let description = super.getDescription()
+
+        if(this.hasMajor()) {
+            description += ` their major is ${this.major}`
+        }
+
+        return description
+    }
+}
+```

@@ -456,3 +456,97 @@ class Student extends Person {
     }
 }
 ```
+
+<h2 align=”center”>
+Day 17 & 18: January 18-19, 2018
+</h2>
+
+**Today's Progress**: Jam 18- Review of React components, props, events and methods. 
+Jan 19 - Review of method binding within react. Lots of review and practice with the basics of state.
+Started jsx counter app rework using react.
+
+**Thoughts:**:  18th was my birthday, I still coded but did not get to update my log including it for today.
+Making sure to update my log every day going forward and also writing a brief about something difficult to review if applicable.
+
+**Brief**: 1. Providing e.preventDefault() if I am submitting any type of form. 
+2. If this is used in a class method, a constructor and super need to be included to bind the this within the class.
+3. Need to get more comfortable with using e.target in various events within React.
+4. Clarifying where the name attribute is necessary and used within inputs and forms.
+```
+class Counter extends React.Component {
+    constructor(props){
+        super(props)
+        this.handleAddOne = this.handleAddOne.bind(this)
+        this.handleMinusOne = this.handleMinusOne.bind(this)
+        this.handleReset = this.handleReset.bind(this)
+    }
+    handleAddOne(){
+        console.log('Add One')
+    }
+    handleMinusOne(){
+        console.log('Minus one')
+    }
+    handleReset(){
+        console.log('Reset')
+    }
+
+
+    render(){
+        return (
+            <div>
+                <h1>Count: </h1>
+                <button onClick={this.handleAddOne}>+1</button>
+                <button onClick={this.handleMinusOne}>-1</button>
+                <button onClick={this.handleReset}>reset</button>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<Counter />, document.getElementById('app'))
+
+```
+```
+class AddOption extends React.Component {
+    handleAddOption(e){
+        e.preventDefault()
+        const option = e.target.elements.option.value.trim()
+
+        if(option) {
+            alert(option)
+        }
+    }
+    render() {
+        return(
+            <div>
+                <form onSubmit={this.handleAddOption}>
+                    <input type='text' name='option' />
+                    <button>Submit</button>
+                </form>
+            </div>
+        )
+    }
+}
+
+class Options extends React.Component {
+    constructor(props){
+        super(props)
+        this.handleRemoveAll = this.handleRemoveAll.bind(this)
+    }
+    
+    handleRemoveAll() {
+        alert('handleRemoveAll')
+    }
+    
+    render () {
+        return (
+            <div>
+                <button onClick={this.handleRemoveAll}>Remove all</button>
+                {
+                    this.props.options.map((option, i) => <Option key={i} option={option} />)
+                }
+            </div>
+        )
+    }
+}
+```

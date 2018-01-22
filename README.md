@@ -461,7 +461,7 @@ class Student extends Person {
 Day 17 & 18: January 18-19, 2018
 </h2>
 
-**Today's Progress**: Jam 18- Review of React components, props, events and methods. 
+**Today's Progress**: Jan 18- Review of React components, props, events and methods. 
 Jan 19 - Review of method binding within react. Lots of review and practice with the basics of state.
 Started jsx counter app rework using react.
 
@@ -549,4 +549,53 @@ class Options extends React.Component {
         )
     }
 }
+```
+<h2 align=”center”>
+Day 19: January 21, 2018
+</h2>
+
+**Today's Progress**:  Reworked previous counter and visibilty jsx apps into React apps. Things I reviewed were default state objects, setting state, 
+passing methods to react children via props, and using callback functions using prevState. As well as upcoming setState syntax standards.
+
+**Thoughts:**:  Failed myself and didn't code yesterday, birthday weekend. Right back on track today with a solid few hours of code. Coding streak of 13 days
+
+**Brief**: 1. Using arrow functions as the primary argument to the setState method.
+2. Passing methods as props, calling prop methods. Need to review and practice more with props / propTypes
+3. Make sure to remember usually returning an object with key value pairs when using arrow functions in setState.
+4. Practice more using state.
+
+```
+class VisibilityToggle extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleClick = this.handleClick.bind(this)
+        this.state = {
+            visible: false
+        }
+    }
+    handleClick(){
+        this.setState((prevState)=>{
+            return {
+                visible: !prevState.visible
+            }
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Visibility</h1>
+                <button onClick={this.handleClick}>
+                    {this.state.visible ? 'Show Details' : 'Hide Details'}
+                </button>
+                {this.state.visible && (
+                    <div>
+                        <p>something</p>
+                    </div>
+                )}
+            </div>
+        )
+    }
+}
+
 ```

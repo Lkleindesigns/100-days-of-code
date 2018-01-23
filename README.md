@@ -659,3 +659,17 @@ handleAddOption(option){
     }
 }
 ```
+<h2 align=”center”>
+Day 21: January 23, 2018
+</h2>
+
+<img src ="https://ideadecodesign.files.wordpress.com/2017/03/posix.jpg?w=1200">
+
+**Today's Progress**:  Rewrote Decision app to reinforce what i was learning, practice with stateless functional objects and default props.
+
+**Thoughts:**: I need to focus more on projects. Instead of little exercises.
+
+**Brief**: 1. Setting a const within a function will still trigger the function when called.
+2. The name value in a input is used under e.target.elements.
+3. Avoid name collision within react seperate components to improve clarity.
+4. Make sure to call props on conditional logic if using props

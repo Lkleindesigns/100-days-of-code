@@ -599,3 +599,63 @@ class VisibilityToggle extends React.Component {
 }
 
 ```
+
+<h2 align=”center”>
+Day 20: January 22, 2018
+</h2>
+
+**Today's Progress**:  Indecision app continued, practice with sending data from children to parent components within react using state. Practicing
+best practices for state vs props.
+
+**Thoughts:**: Continuing to make good progress using react, I need to start working on a personal project
+
+**Brief**: 1. Need to practice using logical && operators to render jsx.
+2. Components can have two methods with the same name if one is passed from a parent component as a prop.
+3. 3. Passing error messages from a parent component method with a parameter.
+4. 4. Calling methods and setting methods using this.props
+
+```
+handleAddOption(option){
+        if(!option) {
+            return 'Enter valid value to add item'
+        } else if (this.state.options.indexOf(option) > -1) {
+            return 'This option already exists'
+        } 
+
+        this.setState((prevState) => {
+            return {
+                options: [...prevState.options, option]
+            }
+        })
+    }
+    
+    class AddOption extends React.Component {
+    constructor(props){
+        super(props)
+        this.handleAddOption = this.handleAddOption.bind(this)
+        this.state = {
+            error: undefined
+        }
+    }
+    handleAddOption(e){
+        e.preventDefault()
+        const option = e.target.elements.option.value.trim()
+        const error = this.props.handleAddOption(option)
+
+        this.setState(() => {
+            return { error }
+        })
+    }
+    render() {
+        return(
+            <div>
+            {this.state.error && <p>{this.state.error}</p>}
+                <form onSubmit={this.handleAddOption}>
+                    <input type='text' name='option' />
+                    <button>Submit</button>
+                </form>
+            </div>
+        )
+    }
+}
+```

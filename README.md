@@ -673,3 +673,15 @@ Day 21: January 23, 2018
 2. The name value in a input is used under e.target.elements.
 3. Avoid name collision within react seperate components to improve clarity.
 4. Make sure to call props on conditional logic if using props
+
+<h2 align=”center”>
+Day 22: January 24, 2018
+</h2>
+
+**Today's Progress**: Spent a few hours today really reviewing what I have learned over the past week.
+
+**Thoughts:**: I'm getting much better with React and I am really understanding it.
+
+**Brief**: 1. Passing state to a component as a prop which maps over the props and passes it down to another child component as individual props for it to render.
+2. Making sure to use stateless functional components when the component does not require state.
+3. Error handling in React

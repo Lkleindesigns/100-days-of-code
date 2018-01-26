@@ -690,7 +690,7 @@ Day 22: January 24, 2018
 Day 23: January 25, 2018
 </h2>
 
-**Today's Progress**: Worked with default props, passing methods as props which 
+**Today's Progress**: Worked with default props, passing methods as props which pass themselves to children props, learning my way around with react developer tools
 
 **Thoughts:**: Pushed myself to stay up late and code, didn't accomplish much today i am extremely tired
 

@@ -685,3 +685,13 @@ Day 22: January 24, 2018
 **Brief**: 1. Passing state to a component as a prop which maps over the props and passes it down to another child component as individual props for it to render.
 2. Making sure to use stateless functional components when the component does not require state.
 3. Error handling in React
+
+<h2 align=”center”>
+Day 23: January 25, 2018
+</h2>
+
+**Today's Progress**: Worked with default props, passing methods as props which 
+
+**Thoughts:**: Pushed myself to stay up late and code, didn't accomplish much today i am extremely tired
+
+**Brief**: 1. Don't code when really wound up just making myself frustrated.

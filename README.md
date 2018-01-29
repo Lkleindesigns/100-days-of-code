@@ -690,8 +690,55 @@ Day 22: January 24, 2018
 Day 23: January 25, 2018
 </h2>
 
-**Today's Progress**: Worked with default props, passing methods as props which pass themselves to children props, learning my way around with react developer tools
+**Today's Progress**: Worked with default props, passing methods to components as props which pass themselves to children components, learning my way around with react developer tools
 
 **Thoughts:**: Pushed myself to stay up late and code, didn't accomplish much today i am extremely tired
 
-**Brief**: 1. Don't code when really wound up just making myself frustrated.
+**Brief**: 1. Don't code when really tired wound up just making myself frustrated.
+
+<h2 align=”center”>
+Day 24: January 26, 2018
+</h2>
+
+**Today's Progress**: 
+
+**Thoughts:**: Set up Decision react-app to delete individual options, began learning about Component lifecycle methods
+
+**Brief**: 1. Have to pass in an arrow function to call a function that takes a prop in onClick otherwise it calls it immediately.
+2. componentWillUpdate takes two parameters prevProps, and prevState.
+
+```
+    <button 
+        onClick={() => {
+            props.handleDeleteOption(props.optionText)
+        }}
+    >
+```
+
+<h2 align=”center”>
+Day 25: January 28, 2018
+</h2>
+
+**Today's Progress**: 
+
+**Thoughts:**: Set up indecision app to use componentWillUpdate and componentDidMount lifecycle methods. Learned about localStorage.setItem and localStorage.getItem.
+Begun learning about web-pack on a overview of why its useful level
+
+**Brief**: 1. Using try catch blocks within componentDidMount
+2. Using parseInt(num, 10) remembering to set the 2nd paramater
+3. Checking if its a num using if(!isNaN(num))
+
+```
+componentDidMount() {
+        const count = parseInt(localStorage.getItem('count'), 10)
+        if(!isNaN(count)) {
+            this.setState(()=>({ count })) 
+        }
+    }
+    componentDidUpdate(prevProps,prevState) {
+        if(prevState.count !== this.state.count) {
+            localStorage.setItem('count', this.state.count)
+        }
+    }
+```
+

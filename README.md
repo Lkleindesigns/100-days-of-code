@@ -722,7 +722,7 @@ Day 25: January 28, 2018
 **Today's Progress**: 
 
 **Thoughts:**: Set up indecision app to use componentWillUpdate and componentDidMount lifecycle methods. Learned about localStorage.setItem and localStorage.getItem.
-Begun learning about web-pack on a overview of why its useful level
+Overview of what babel is and why its useful.
 
 **Brief**: 1. Using try catch blocks within componentDidMount
 2. Using parseInt(num, 10) remembering to set the 2nd paramater
@@ -742,3 +742,30 @@ componentDidMount() {
     }
 ```
 
+<h2 align=”center”>
+Day 26: January 29, 2018
+</h2>
+
+**Today's Progress**: Learned a lot about the inner workings of webpack, configuring webpack, setting up a bundle file, using babel within webpack, using .babelrc file to set presets, using source maps, review of import export statements, and __dirname
+
+**Thoughts:**: Made a lot of progress learning about webpack.
+
+```
+const path = require('path')
+
+module.exports = {
+    entry: './src/app.js',
+    output: {
+        path: path.join(__dirname, 'public'),
+        filename: 'bundle.js'
+    },
+    module: {
+        rules: [{
+            loader: 'babel-loader',
+            test: /\.js$/,
+            exclude: /node_modules/
+        }]
+    },
+    devtool: 'cheap-module-source-map'
+}
+```

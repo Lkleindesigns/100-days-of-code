@@ -808,3 +808,29 @@ const newSyntax = new NewSyntax()
 const newGetGreeting = newSyntax.getGreeting;
 console.log(newGetGreeting())
 ```
+
+<h2 align=”center”>
+Day 28: January 31, 2018
+</h2>
+
+**Today's Progress**: Set up decision app to use react modal. Learned about basic setup of the modal. Learned about passing children to components. Learned about refactoring stateless functional objects to implicitly return.
+**Thoughts:**: 1. Children are passed into components between opening and closing tags <Component> <p>{'children'}</p> </Component> and are accessed using props.children
+2. Using !! operators to turn undefined to a falsy value and using it within isOpen on the Modal
+3. Searching for an import statement on react docs of a component to find out the import name 
+```
+const OptionModal = (props) => (
+    <Modal
+        isOpen={!!props.selectedOption}
+        onRequestClose={props.handleClearModal}
+        contentLabel="Selected Option"        
+    >
+        <h3>Selected Option</h3>
+        {props.selectedOption && <p>{props.selectedOption}</p>}
+        <button 
+            onClick={props.handleClearModal}
+        >
+        Okay</button>
+    </Modal>
+)
+
+```

@@ -769,3 +769,42 @@ module.exports = {
     devtool: 'cheap-module-source-map'
 }
 ```
+
+<h2 align=”center”>
+Day 27: January 30, 2018
+</h2>
+
+**Today's Progress**: Set up a dev server using webpack. Continuing to learn more about webpack using the docs. Set up the babel transform class plugin, 
+and learned how it makes React ES6 class syntax cleaner and easier to write.
+**Thoughts:**: 1. Webpack dev server is installed using npm, setup as an object in the webpack.config and uses nodes path to set the contentBase.
+2. Using the transform plugin the state is already bound to the class, constructors do not have to be defined, methods do not need to bind their this variable, const or let are not used to define methods, and methods are defined using arrow functions.
+3. Render is still defined normally using the babel plugin.
+
+```
+class OldSyntax {
+    constructor(props) {
+        super(props)
+        this.name = 'Me'
+        this.getGreeting = this.getGreeting.bind(this)
+    }
+    getGreeting() {
+        return `Hi, my name is ${this.name}`
+    }
+}
+
+const oldSyntax = new OldSyntax()
+const getGreeting = oldSyntax.getGreeting
+console.log(getGreeting())
+
+class NewSyntax {
+    name = 'Me2'
+    state = []
+    getGreeting = () => {
+        return `Hi, my name is ${this.name}`
+    }
+}
+
+const newSyntax = new NewSyntax()
+const newGetGreeting = newSyntax.getGreeting;
+console.log(newGetGreeting())
+```

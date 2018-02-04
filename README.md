@@ -813,7 +813,7 @@ console.log(newGetGreeting())
 Day 28: January 31, 2018
 </h2>
 
-**Today's Progress**: Set up decision app to use react modal. Learned about basic setup of the modal. Learned about passing children to components. Learned about refactoring stateless functional objects to implicitly return.
+**Today's Progress**: Set up decision app to use react modal. Learned about basic setup of the modal, passing children to components, refactoring stateless functional objects to implicitly return, and understanding usage of double bang operator
 **Thoughts:**: 1. Children are passed into components between opening and closing tags <Component> <p>{'children'}</p> </Component> and are accessed using props.children
 2. Using !! operators to turn undefined to a falsy value and using it within isOpen on the Modal
 3. Searching for an import statement on react docs of a component to find out the import name 
@@ -833,4 +833,33 @@ const OptionModal = (props) => (
     </Modal>
 )
 
+```
+
+<h2 align=”center”>
+Day 29: February 3, 2018
+</h2>
+
+**Today's Progress**: Completed a Code Wars Kata printing a diamond shape to the console using asterisks and vanilla Javascript. Refreshed a bit on Async Await, but didn't wind up needing to use it.
+**Thoughts:**: 1. When using loops with async, await should typically be called within the loop.
+2. repeat function is used to print a character x times.
+3. key to solving issues is to break it down in to small obtainable steps, not trying to solve it all at once.
+```
+function diamond(n){
+    if(n % 2 === 0 || n < 0) {
+      return null
+    }
+    var spaces = Math.floor(n/2)
+    var someArr = []
+    for(var i = 1; i <= n; i+=2){
+        someArr.push(' '.repeat(spaces) + '*'.repeat(i) + '\n')
+        spaces--
+    }
+    spaces = 1
+    for(var x = n-2; x >= 0; x-=2){
+        someArr.push(' '.repeat(spaces) + '*'.repeat(x) + '\n')
+        spaces++
+    }
+
+    console.log(someArr.join(''))
+  }
 ```

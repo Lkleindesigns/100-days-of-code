@@ -863,3 +863,20 @@ function diamond(n){
     console.log(someArr.join(''))
   }
 ```
+<h2 align=”center”>
+Day 30: February 4, 2018
+</h2>
+
+**Today's Progress**: Install modules to configure webpack with css and scss. Update webpack config file to use modules. Implement scss, settings, base, and  partial components. Add scss classNames to Decision app. Learn about block element modifiers - bem
+**Thoughts:**: Learned a ton about scss/sass with webpack and bem. Scss/Sass seems incredibly useful and easy to pick up.
+
+1. Scss uses a very specific naming convention and architecture.
+    a. Modules installed to configure webpack with scss - css-loader, node-sass, sass-loader, normalize.css, style-loader
+    b. Everything is imported into a styles.scss that is then imported into the app. -ordering matters, variable declarations are imported first, then alphabetically.
+    c. Partial scss files are created using an underscore but imported without it and without extension by default _base.scss @import './base'
+    d. Scss files are seperated into two folders -base which modifies the entire app, and -components which apply to specific components.
+    e. Elements inside of elements are declared using double underscores .header__title is a title element inside of a header.
+    f. Modifiers inside of elements are declared using double hyphens .button--link and then used in the className after the subsequent class name 'button button--link'
+    g. Declaring font-size on html at 62.5% will calculate rem to 10 units 1rem = 10px
+2. Scss variables are declared and called using a dollar sign $variableName
+3. Scss contains Sass reference functions that you can call like javascript functions on css elements - border-bottom: .6rem solid darken($purple, 10%) 

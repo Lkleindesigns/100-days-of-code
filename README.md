@@ -879,4 +879,29 @@ Day 30: February 4, 2018
     f. Modifiers inside of elements are declared using double hyphens .button--link and then used in the className after the subsequent class name 'button button--link'
     g. Declaring font-size on html at 62.5% will calculate rem to 10 units 1rem = 10px
 2. Scss variables are declared and called using a dollar sign $variableName
-3. Scss contains Sass reference functions that you can call like javascript functions on css elements - border-bottom: .6rem solid darken($purple, 10%) 
+3. Scss contains 'Sass reference functions' that you can call like javascript functions on css elements - border-bottom: .6rem solid darken($purple, 10%) 
+
+<h2 align=”center”>
+Day 31: February 6, 2018
+</h2>
+
+**Today's Progress**: Finish styles of app using scss. Setup widget, option, form, and input styles.
+**Thoughts:**: Missed a day yesterday wasn't feeling great, still not feeling well today but got in an hour of code anyway!
+
+```
+.add-option {
+    display: flex;
+    padding: $m-size;
+}
+
+.add-option__input {
+    background: $dark-blue;
+    border: none;
+    color: $off-white;
+    border-bottom: .3rem solid darken($dark-blue, 10%);
+    flex-grow: 1;
+    margin-right: $s-size;
+    padding: $s-size;
+}
+```
+

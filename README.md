@@ -905,3 +905,21 @@ Day 31: February 6, 2018
 }
 ```
 
+<h2 align=”center”>
+Day 32: February 7, 2018
+</h2>
+
+**Today's Progress**: Setup meta tags for mobile devices, setup styles for third party components, setup css media queries to style for mobile devices. Fix edge cases for user inputs using word-break.
+**Thoughts:**:  Going to code my ass off the next few days.
+1. Setting a desktop breakpoint at 450px 
+2. Use greater than signs to target specific elements inside a selector .ReactModalPortal > div {}
+3. @media expressions to target mobile devices. Inside the media styles is the desktop size - regular styles target mobile devices.
+4. Target 3rd party component styles using developer tools.
+
+```
+@media (min-width: $desktop-breakpoint) {
+    .header {
+        margin-bottom: $xl-size;
+    }
+}
+```

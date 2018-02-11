@@ -923,3 +923,40 @@ Day 32: February 7, 2018
     }
 }
 ```
+
+<h2 align=”center”>
+Day 33: February 10, 2018
+</h2>
+
+**Today's Progress**: Create React-Webpack-Scss boilerplate template. React Router fundamentals, overview, & historyApiFallback. Differences between server & client side routing. Set up initial routes and components for expensify app. Setup BrowserRouter, Switch, and Navlink components. 
+**Thoughts:**:  I need to be more consistent with myself.
+1. Use exact on initial homepage routes and links. 
+2. historyApiFallback to avoid requesting from server and just rendering new components
+3. Route structure with a div inside of BrowserRouter to render navbar on all pages.
+
+```
+const Header = () => (
+    <header>
+        <h1>Expensify</h1>
+        <NavLink to='/' activeClassName='is-active' exact={true}>Dashboard </NavLink>
+        <NavLink to='/create' activeClassName='is-active'>Create Expense</NavLink>
+        <NavLink to='/edit' activeClassName='is-active'>Edit Expense</NavLink>
+        <NavLink to='/help' activeClassName='is-active'>Help </NavLink>
+    </header>
+)
+
+const routes = (
+    <BrowserRouter>
+        <div>
+            <Header />
+            <Switch>
+            <Route path='/' component={ExpenseDashboardPage} exact={true}/>
+            <Route path='/create' component={AddExpensePage}/>
+            <Route path='/edit' component={EditExpensePage}/>
+            <Route path='/help' component={HelpPage}/>
+            <Route component={NotFoundPage}/>
+            </Switch>
+        </div> 
+    </BrowserRouter>
+)
+```

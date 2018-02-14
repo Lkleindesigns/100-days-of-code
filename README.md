@@ -960,3 +960,49 @@ const routes = (
     </BrowserRouter>
 )
 ```
+
+<h2 align=”center”>
+Day 34: February 12, 2018
+</h2>
+
+**Today's Progress**: Built a barebones React portfolio site using React Router. Learned about organizing routes, query strings, and URL parameters.
+**Thoughts:**:  I need to remember use cases of exact when creating links/routes. Example projects like this really help with the retention of what i'm learning
+1. The route for the not found page is has no path, just renders a component.
+2. Component function or class has to have props as a parameter to make use of query strings like an id.
+3. Props.match.params contain all of the parameters of the linked route.
+
+```
+const PortfolioItem = (props) =>  (
+        <div>
+            {console.log(props)}
+            {props.match.params.id}
+            {props.match.url}
+        </div>
+    )
+ <Route path='/portfolio' component={Portfolio} exact={true} />
+ <Route path='/portfolio/:id' component={PortfolioItem} />
+ <Route component={NotFoundPage}/>
+
+```
+
+<h2 align=”center”>
+Day 35: February 13, 2018
+</h2>
+
+**Today's Progress**: First setup of redux and initial overview of why it's important, and what problems it solves.
+**Thoughts:**:  Think of it as a global store that contains the state for all components. It essentially keeps you from having to pass state and props down to every component in a chain, and for components that may not be connected. It also makes components reusable and not reliant on other components.
+
+1. Pass down props with redux only if the components are closely tied together.
+2. createStore is imported from redux module and has to be initialized with a function.
+3. state can be passed in as the initial parameter to the createStore called with a default value.
+4. state within the store can be referenced by store.getState()
+
+```
+import { createStore } from 'redux'
+
+const store = createStore((state = { count: 0 }) => {
+    return state
+});
+
+console.log(store.getState())
+```

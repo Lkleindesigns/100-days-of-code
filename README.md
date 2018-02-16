@@ -965,7 +965,7 @@ const routes = (
 Day 34: February 12, 2018
 </h2>
 
-**Today's Progress**: Built a barebones React portfolio site using React Router. Learned about organizing routes, query strings, and URL parameters.
+**Today's Progress**: Built a bare bones React portfolio site using React Router. Learned about organizing routes, query strings, and URL parameters.
 **Thoughts:**:  I need to remember use cases of exact when creating links/routes. Example projects like this really help with the retention of what i'm learning
 1. The route for the not found page is has no path, just renders a component.
 2. Component function or class has to have props as a parameter to make use of query strings like an id.

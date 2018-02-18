@@ -1006,3 +1006,58 @@ const store = createStore((state = { count: 0 }) => {
 
 console.log(store.getState())
 ```
+
+<h2 align=”center”>
+Day 36: February 14 - 15, 2018
+</h2>
+
+**Today's Progress**: Dispatching actions, subscribing / unsubscribing, and dynamic actions
+**Thoughts:**:  Need to review switch statements.
+1. Actions are declared by dispatching them to the store and are available on the action parameter in the switch statement.
+2. When setting dynamic actions declare it with a const and check it by using typeof
+3. Setting subscribe to a const unsubscribe and calling unsubscribe will remove the subscription.
+
+```
+
+const store = createStore((state = { count: 0 }, action) => {
+    switch (action.type) {
+        case 'INCREMENT':
+            const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1
+            return {
+                count: state.count + incrementBy
+            }
+            
+const unsubscribe = store.subscribe(() => {
+    console.log(store.getState())
+})
+
+store.dispatch({
+    type: 'INCREMENT',
+    incrementBy: 5
+})
+
+            
+```
+
+<h2 align=”center”>
+Day 37: February 17, 2018
+</h2>
+
+**Today's Progress**: Reviewed ES6 Object and Array destructuring, Redux action generators, refactoring and organizing code,
+**Thoughts:**: Focus on learning slowly.
+1. Set the object to a default object and the parameter to a default value within the action generator.
+2. Define the parameter in the action generator, it typically the same name incrementBy: incrementBy - incrementBy
+3. In the store the action generator is available under the action object. action.incrementBy
+
+```
+const incrementCount = ({ incrementBy = 1 } = {}) => ({
+        type: 'INCREMENT',
+        incrementBy
+    })
+    
+store.dispatch(incrementCount({incrementBy: 5}))
+
+const [drink, , m] = item
+
+const { name: publisherName = 'Self-Published' } = book.publisher
+```

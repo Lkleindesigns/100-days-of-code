@@ -1061,3 +1061,40 @@ const [drink, , m] = item
 
 const { name: publisherName = 'Self-Published' } = book.publisher
 ```
+
+<h2 align=”center”>
+Day 38: February 21 & 22, 2018
+</h2>
+
+**Today's Progress**: Working with multiple reducers, setting up new personal react/redux project, using es6 spread operators within reducers, dispatching actions with multiple reducers
+**Thoughts:**: Focus on learning slowly.
+1. Pass a function in when calling store.subscribe
+2. Review how to get back id's using reducers
+3. Need more practice using actions with multiple reducers.
+
+```
+const addFood = ({ name = '', originalQuantity = 0} = {}) => ({
+    type: 'ADD_FOOD',
+    food: {
+        id: uuid(),
+        name,
+        originalQuantity
+    }
+})
+
+const foodsReducer = (state = foodsReducerDefaultState, action) => {
+    switch(action.type) {
+        case 'ADD_FOOD': 
+            return [...state, action.food]
+        default:
+            return state
+    }
+}
+
+store.subscribe(() => {
+    console.log(store.getState())
+})
+
+store.dispatch(addFood({ name: 'Chicken Breast', originalQuantity: 4}))
+
+```
